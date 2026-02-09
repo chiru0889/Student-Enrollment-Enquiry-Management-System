@@ -1,0 +1,9 @@
+USE certisured_db;
+SELECT * FROM emi;
+SELECT * FROM enquiry WHERE status = 'Enquiry';
+SELECT id, name, payment_type, amount FROM enrollment;
+
+SELECT e.id,en.name,e.emi_no,e.amount,e.due_date,e.status FROM emie JOIN enrollment en ON e.enrollment_id = en.id WHERE e.status = 'Overdue';
+
+
+Now press Ctrl + F
